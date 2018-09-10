@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Busch Gardens Survey</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans" rel="stylesheet">
+</head>
+
+<!----------------------------------------------
+Notes:  check Mozzila for formatting for type=text controls
+		finish reading Mozzila form page and implement anything needed
+		format labels with respective text inputs (align)
+		add space between questions; may have to create divs for each question
+		formatting labels isn't working; read documentation about formatting labels specifically
+----------------------------------------------->
+
+
+<body>
+	<div id="bg-img">
+		<div id="form-page">
+			<div id="header">
+				<h1 id="title">Busch Gardens Survey</h1>
+			</div>
+			<form action="#" method="get" id="survey-form">
+				
+				<!-- Intro -->
+				<div id="main">
+					<p id="description">We're so glad you visited Busch Gardens! Please take our survey so that we can continue to provide great experiences.</p>
+
+					<!-- Personal Info -->
+					<h2>Personal Information</h2>
+					<div id="personal-info">
+						<div class="personal-info-row"> 
+							<div class="col-wide">
+								<label for="name" id="name-label" class="personal-info-label">Name: </label>
+							</div>
+							<div class="col-narrow">
+								<input id="name" name="name" type="text" required placeholder="Enter your first name" maxlength="30"/>
+							</div>	
+						</div>
+
+						<div class="personal-info-row">
+							<div class="col-wide">
+								<label for="email" id="email-label" class="personal-info-label">Email: </label>
+							</div>
+							<div class="col-narrow">
+								<input id="email" name="email" type="email" required placeholder="Enter your email" maxlength="50"/>
+							</div>
+						</div>
+
+						<div class="personal-info-row"> 
+							<div class="col-wide">
+								<label for="number" id="number-label" class="personal-info-label">Age: </label>
+							</div>
+							<div class="col-narrow">
+								<input id="number" name="age" type="number" required placeholder="Enter your age" maxlength="3" min="10" max="120"/>
+							</div>
+						</div>
+
+						<div class="personal-info-row"> 
+							<div class="col-wide">
+								<label for="date" class="personal-info-label">Date you visited: </label>
+							</div>
+							<div class="col-narrow">
+								<input id="date" type="date" required/>
+							</div>
+						</div>
+
+						<div class="personal-info-row">
+							<div>	
+								<label for="group-size" id="last-personal-label" class="personal-info-label">How many people were in your party, including yourself?</label>
+							</div>
+							<div id="last-personal-input">
+								<input id="group-size" name="group-size" type="number" required placeholder="Number in your party" maxlength="3" min="1" max="200"/>
+							</div>
+						</div>
+					</div>
+
+					<!-- Experience Questions -->
+					<div id="experience">
+						<h2>Your Experience</h2>
+						<p><b>Please answer the following based on your most recent visit.</b></p>
+					
+						<!-- Q1 -->	
+						<div class="questions">
+							<fieldset>
+								<legend>How often do you visit Busch Gardens?</legend>
+								<p>
+									<input name="often" type="radio" id="q1-first" value="this was my first time"/>
+									<label for="q1-first">This was my first time</label>
+								</p>
+								<p>
+									<input name="often" type="radio" id="q1-multi-month" value="more than once a month"/>
+									<label for="q1-multi-month">More than once a month</label>
+								</p>
+								<p>
+									<input name="often" type="radio" id="q1-once-month" value="about once a month"/>
+									<label for="q1-once-month">About once a month</label>
+								</p>
+								<p>
+									<input name="often" type="radio" id="q1-multi-year" value="more than once a year"/>
+									<label for="q1-multi-year">More than once a year</label>
+								</p>
+								<p>
+									<input name="often" type="radio" id="q1-once-year" value="about once a year"/>
+									<label for="q1-once-year">About once a year</label>
+								</p>
+								<p>
+									<input name="often" type="radio" id="q1-less-year" value="less than once a year"/>
+									<label for="q1-less-year">Less than once a year</label>
+								</p>
+							</fieldset>
+						</div>
+
+						<!-- Q2 -->
+						<div class="questions">
+							<fieldset>
+								<legend>What would increase how often you visit?</legend>
+								<p>
+									<input name="increase-visits" type="checkbox" id="q2-more-food" value="more-food"/>
+									<label for="q2-more-food">Larger variety of food choices</label>
+								</p>
+								<p>
+									<input name="increase-visits" type="checkbox" id="q2-more-rides" value="more-rides"/>
+									<label for="q2-more-rides">More rides and roller coasters</label>
+								</p>
+								<p>	
+									<input name="increase-visits" type="checkbox" id="q2-more-shows" value="more-shows"/>
+									<label for="q2-more-shows">More shows</label>
+								</p>
+								<p>	
+									<input name="increase-visits" type="checkbox" id="q2-more-tours" value="more-tours"/>
+									<label for="q2-more-tours">More adventure tours</label>
+								</p>
+								<p>	
+									<input name="increase-visits" type="checkbox" id="q2-fast-pass" value="fast-pass"/>
+									<label for="q2-fast-pass">Option for a fast pass or similar system</label>
+								</p>
+								<p>	
+									<input name="increase-visits" type="checkbox" id="q2-other" value="other"/>
+									<label for="q2-other">Other (please specify) </label>
+									<input type="text" name="increase-visits" maxlength="30"/>
+								</p>
+							</fieldset>
+						</div>
+
+						<!-- Q3 -->
+						<div class="questions">
+							<fieldset>
+								<legend>What did you spend the most money on during your most recent visit?</legend>
+								<p>
+									<input type="radio" name="spendings" id="q3-food" value="food"/>
+									<label for="q3-food">Food & Drinks</label>
+								</p>
+								<p>
+									<input type="radio" name="spendings" id="q3-tours" value="tours"/>
+									<label for="q3-tours">Adventure Tours</label>
+								</p>
+								<p>
+									<input type="radio" name="spendings" id="q3-souvenirs" value="souvenirs"/>
+									<label for="q3-souvenirs">Souvenirs</label>
+								</p>
+								<p>
+									<input type="radio" name="spendings" id="q3-other" value="other"/>
+									<label for="q3-other">Other (please specify) </label>	
+									<input type="text" name="spendings" maxlength="30"/>
+								</p>
+							</fieldset>
+						</div>
+						
+						<!-- Q4 -->
+						<div class="questions">
+							<fieldset>
+								<legend>What did you enjoy about your most recent visit? (Choose all that apply)</legend>
+								<p>
+									<input type="checkbox" name="enjoy" id="q4-rides" value="rides"/>
+									<label for="q4-rides">Rides & Roller Coasters</label>
+								</p>
+								<p>
+									<input type="checkbox" name="enjoy" id="q4-shows" value="shows"/>
+									<label for="q4-shows">Shows (without animals)</label>
+								</p>
+								<p>
+									<input type="checkbox" name="enjoy" id="q4-exhibits" value="exhibits"/>
+									<label for="q4-exhibits">Exhibits</label>
+								</p>
+								<p>
+									<input type="checkbox" name="enjoy" id="q4-tours" value="tours"/>
+									<label for="q4-tours">Adventure Tours</label>
+								</p>
+								<p>
+									<input type="checkbox" name="enjoy" id="q4-special-event" value="special-event"/>
+									<label for="q4-special-event">Special Event</label>
+								</p>
+								<p>
+									<input type="checkbox" name="enjoy" id="q4-food-drink" value="food-drink"/>
+									<label for="q4-food-drink">Food & Drink</label>
+								</p>
+								<p>
+									<input type="checkbox" name="enjoy" id="q4-other" value="other"/>
+									<label for="q4-other">Other (please specify)</label>
+									<input type="text" name="enjoy" maxlength="30"/>
+								</p>
+							</fieldset>
+						</div>
+
+						<!-- Q5 -->
+						<div class="questions">
+							<p>Please rate the following services. 1 being the poorest experience, and 5 being the best experience.</p>
+							<fieldset>
+								<div id="services">
+
+									<div id="staff">
+										<div class="radio-col-left">
+											<legend>Staff Service</legend>
+										</div>
+
+										<div class="radio-set">
+											<input type="radio" name="staff" id="q5-staff-1" class="services" value="1"/> 
+											<label for="q5-staff-1">1</label>
+											<input type="radio" name="staff" id="q5-staff-2" class="services" value="2"/>
+											<label for="q5-staff-2">2</label>
+											<input type="radio" name="staff" id="q5-staff-3" class="services" value="3"/>
+											<label for="q5-staff-3">3</label>
+											<input type="radio" name="staff" id="q5-staff-4" class="services" value="4"/>
+											<label for="q5-staff-4">4</label>
+											<input type="radio" name="staff" id="q5-staff-5" class="services" value="5"/>
+											<label for="q5-staff-5">5</label>
+										</div>	
+									</div>
+
+									<div id="tickets">
+										<div class="radio-col-left">
+											<legend>Purchasing tickets</legend>
+										</div>
+										<div class="radio-set">
+											<input type="radio" name="tickets" id="q5-tickets-1" class="services" value="1"/>
+											<label for="q5-tickets-1">1</label>
+											<input type="radio" name="tickets" id="q5-tickets-2" class="services" value="2"/>
+											<label for="q5-tickets-2">2</label>
+											<input type="radio" name="tickets" id="q5-tickets-3" class="services" value="3"/>
+											<label for="q5-tickets-3">3</label>
+											<input type="radio" name="tickets" id="q5-tickets-4" class="services" value="4"/>
+											<label for="q5-tickets-4">4</label>	
+											<input type="radio" name="tickets" id="q5-tickets-5" class="services" value="5"/>
+											<label for="q5-tickets-5">5</label>
+										</div>
+									</div>
+
+									<div id="map">
+										<div class="radio-col-left">
+											<legend>Park Map and Guide</legend>
+										</div>
+										<div class="radio-set">
+											<input type="radio" name="map" id="q5-map-1" class="services" value="1"/>
+											<label for="q5-map-1">1</label>
+											<input type="radio" name="map" id="q5-map-2" class="services" value="2"/>
+											<label for="q5-map-2">2</label>
+											<input type="radio" name="map" id="q5-map-3" class="services" value="3"/>
+											<label for="q5-map-3">3</label>
+											<input type="radio" name="map" id="q5-map-4" class="services" value="4"/>
+											<label for="q5-map-4">4</label>
+											<input type="radio" name="map" id="q5-map-5" class="services" value="5"/>
+											<label for="q5-map-5">5</label>
+										</div>
+									</div>	
+
+									<div id="parking">
+										<div class="radio-col-left">
+											<legend>Parking and Park Entrance</legend>
+										</div>
+										<div class="radio-set">
+											<input type="radio" name="parking" id="q5-parking-1" class="services" value="1"/>
+											<label for="q5-parking-1">1</label>
+											<input type="radio" name="parking" id="q5-parking-2" class="services" value="2"/>
+											<label for="q5-parking-2">2</label>
+											<input type="radio" name="parking" id="q5-parking-3" class="services" value="3"/>
+											<label for="q5-parking-3">3</label>
+											<input type="radio" name="parking" id="q5-parking-4" class="services" value="4"/>
+											<label for="q5-parking-4">4</label>
+											<input type="radio" name="parking" id="q5-parking-5" class="services" value="5"/>
+											<label for="q5-parking-5">5</label>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+
+						<!-- Q6 -->
+						<div class="questions">
+							<label for="improvements" class="textarea-label">What could we improve upon?</label>
+							<br>
+							<br>
+							<textarea id="improvements" name="improvements" maxlength="50" cols="30" rows="4"></textarea>
+						</div>
+					
+						<!-- Submit -->
+						<div class="questions">
+							<p>How did you hear about Busch Gardens? 
+								<select id="dropdown" name="find-us" required="required">
+									<option value="facebook">Facebook</option>
+									<option value="website">Our Website</option>
+									<option value="google">Google Search</option>
+									<option value="promo-email">Online Add</option>
+									<option value="friend">A Friend</option>
+									<option value="other">Other</option>
+								</select>
+							</p>
+						</div>
+
+						<div class="questions">
+							<label for="comments" class="textarea-label">Do you have any additional comments?</label>
+							<br>
+							<br>
+							<textarea id="comments" name="comments" cols="30" rows="4"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div id="submit-container">
+					<button id="submit" type="submit">I'm Finished!</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+
